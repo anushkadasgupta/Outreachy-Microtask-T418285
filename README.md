@@ -2,7 +2,7 @@
 
 ##  Overview
 
-This repository contains the solution for **Outreachy Microtask T418285**.
+This repository contains the solution for **Outreachy Microtask T418285** as a part of the project "Addressing the lusophone technological wishlist proposals"
 
 The task was to write a JavaScript script that processes a JSON object and displays the data in a human-readable format on a webpage.
 
