@@ -12,7 +12,7 @@
         <h2>Results of my code:</h2>
         <p id="results" class="block"></p>
         <script id="task_id">
-            
+            // INPUT 
             let data = [
                 {"page_id": 6682420, "creation_date": "2021-09-13", "title": "André Baniwa"},
                 {"page_id": 4246775, "creation_date": "2013-12-10", "title": "Benki Piyãko"},
@@ -28,15 +28,17 @@
                 {"page_id": 6549130, "creation_date": "2021-04-10", "title": "Zezico Guajajara"},
             ];
 
-            let months = [ "January","February","March","April","May","June", "July","August","September","October","November","December"];
+            // YOUR CODE HERE
             for (let i = 0; i < data.length; i++) {
                 let item = data[i];
-                let date = item.creation_date.split("-");
-                let year = date[0];
-                let month = months[date[1] - 1];
-                let day = date[2];
-                let sentence = `Article "${item.title}" (Page ID ${item.page_id}) was created at ${month} ${day}, ${year}.`;
+                let dateObj = new Date(item.creation_date);
+                let formattedDate = new Intl.DateTimeFormat("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }).format(dateObj);
                 
+                let sentence = `Article "${item.title}" (Page ID ${item.page_id}) was created at ${formattedDate}.`;
                 document.getElementById("results").innerHTML += sentence + "<br>";
             }
         </script>
