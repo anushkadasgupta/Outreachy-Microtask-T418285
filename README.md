@@ -16,21 +16,22 @@ The task was to write a JavaScript script that processes a JSON object and displ
   * Page ID
   * Creation date
 
-* Loops through each article using a `for` loop
+- Iterates through each article using a `for` loop
 
-* Extracts and formats the date from `YYYY-MM-DD` to a readable format
+- Converts the `creation_date` string into a JavaScript `Date` object
 
-* Converts numeric month values into month names
+- Formats the date using the `Intl.DateTimeFormat` API for better localization support
 
-* Dynamically generates sentences like:
+- Dynamically generates readable sentences such as:
 
-  ```
-  Article "André Baniwa" (Page ID 6682420) was created at September 13, 2021.
-  ```
 
-* Displays the formatted output inside the HTML element with ID `results`
+Article "André Baniwa" (Page ID 6682420) was created at September 13, 2021.
+
+
+- Displays the formatted output inside the HTML element with ID `results`
 
 ---
+
 
 ##  Technologies Used
 
